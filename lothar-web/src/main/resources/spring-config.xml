@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       default-lazy-init="true" default-autowire="byName"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+    <aop:aspectj-autoproxy/>
+
+    <bean id="monitorHandler" class="org.yeamo.lothar.watcher.MonitorHandler" lazy-init="false">
+    </bean>
+    <!--<bean id="commander" class="org.yeamo.lothar.limiter.Commander" lazy-init="false">-->
+    <!--</bean>-->
+
+</beans>
